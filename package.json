@@ -1,0 +1,39 @@
+{
+  "name": "mern_stack_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "client:setup": "cd client && npm install",
+    "client:build": "cd client && npm run build",
+    "server:setup": "npm install",
+    "heroku-postbuild": "npm run server:setup && npm run client:setup && npm run client:build",
+    "server:start": "node app.js",
+    "server:dev": "nodemon app.js",
+    "start": "concurrently --kill-others-on-fail \"npm run server:start\" \"npm run start --prefix client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonchriscodes/MERN_Stack_App.git"
+  },
+  "author": "Jason Christian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jasonchriscodes/MERN_Stack_App/issues"
+  },
+  "homepage": "https://github.com/jasonchriscodes/MERN_Stack_App#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.3.0",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.1",
+    "validation": "^0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

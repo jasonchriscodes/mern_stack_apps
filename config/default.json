@@ -1,0 +1,4 @@
+{
+  "mongoURI":
+    "mongodb+srv://dbStackApp:Pa$$w0rd@atlascluster.wvo71qa.mongodb.net/?retryWrites=true&w=majority"
+}
